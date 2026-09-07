@@ -1,0 +1,562 @@
+[
+  {
+    "name": "checkManagementAPIUserAccess",
+    "title": "Resource Servers (APIs) - Management API User Access",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkManagementAPIUserAccess.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPasswordPolicy",
+    "title": "Databases - Password Policy",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkPasswordPolicy.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkCustomDomain",
+    "title": "Custom Domains",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkCustomDomain.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkJWTSignAlg",
+    "title": "Use RS256 or PS256 for the JSON Web Token (JWT) Signature Algorithm for all Applications",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkJWTSignAlg.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkGrantTypes",
+    "title": "Application Grant Types",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkGrantTypes.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkCrossOriginAuthentication",
+    "title": "Cross Origin Authentication",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkCrossOriginAuthentication.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkAllowedCallbacks",
+    "title": "Application Allowed Callbacks",
+    "status": "red",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "red",
+        "message": "Synthetic fixture finding for checkAllowedCallbacks.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkNetworkACL",
+    "title": "Tenant Access Control List",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkNetworkACL.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkLogStream",
+    "title": "Log Streams",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkLogStream.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkEmailProvider",
+    "title": "Email Providers",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkEmailProvider.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPasswordNoPersonalInfo",
+    "title": "Databases - Personal Information in Passwords",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPasswordNoPersonalInfo.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPasswordComplexity",
+    "title": "Databases - Password Complexity",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPasswordComplexity.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkEmailAttributeVerification",
+    "title": "Databases - Email Attribute Verification Methods",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkEmailAttributeVerification.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkAuthenticationMethods",
+    "title": "Databases - Authentication Methods",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkAuthenticationMethods.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkRefreshToken",
+    "title": "Refresh Tokens",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkRefreshToken.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkBackchannelLogout",
+    "title": "Applications - Back-Channel Logout",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkBackchannelLogout.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkCanonicalDomain",
+    "title": "Auth0 Domain Check",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkCanonicalDomain.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPasswordResetMFA",
+    "title": "MFA for Password Reset",
+    "status": "yellow",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPasswordResetMFA.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkTokenConstrainingResourceServer",
+    "title": "Resource Servers (APIs) - Token Sender-Constraining",
+    "status": "green",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkTokenConstrainingResourceServer.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkManagementAPIACL",
+    "title": "Management API Access Control",
+    "status": "green",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkManagementAPIACL.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPasswordHistory",
+    "title": "Databases - Password History",
+    "status": "green",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPasswordHistory.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPKCEEnforcement",
+    "title": "Applications - PKCE Enforcement for Public Clients",
+    "status": "green",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPKCEEnforcement.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkAppTokenSenderConstraining",
+    "title": "Applications - Token Sender-Constraining",
+    "status": "green",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkAppTokenSenderConstraining.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkAllowedLogoutUrl",
+    "title": "Application Allowed Logout URLs",
+    "status": "green",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkAllowedLogoutUrl.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkTenantLogoutUrl",
+    "title": "Tenant Allowed Logout URLs",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkTenantLogoutUrl.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkTenantLoginUrl",
+    "title": "Tenant Login URI",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkTenantLoginUrl.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkSupportUrl",
+    "title": "Support URL",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkSupportUrl.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkSupportEmail",
+    "title": "Support Email",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkSupportEmail.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkSessionLifetime",
+    "title": "Session Management",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkSessionLifetime.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkJWEResourceServer",
+    "title": "Resource Servers (APIs) - JSON Web Encryption (JWE)",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkJWEResourceServer.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkGuardianPolicy",
+    "title": "Multifactor Policy",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkGuardianPolicy.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkEventStreams",
+    "title": "Event Streams (Early Access Capability)",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkEventStreams.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkEmailTemplates",
+    "title": "Email Templates",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkEmailTemplates.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkEnabledDatabaseCustomization",
+    "title": "Databases - External User Stores Without Import",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkEnabledDatabaseCustomization.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPrivateKeyJWT",
+    "title": "Applications - Private Key JWT",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPrivateKeyJWT.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPAR",
+    "title": "Applications - Pushed Authorization Requests (PAR)",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPAR.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkJAR",
+    "title": "Applications - JWT Authorization Requests (JAR)",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkJAR.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkApplicationLoginUri",
+    "title": "Application Login URI",
+    "status": "blue",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkApplicationLoginUri.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkEnabledDynamicClientRegistration",
+    "title": "Dynamic Client Registration",
+    "status": "violet",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkEnabledDynamicClientRegistration.",
+        "value": "example-value"
+      }
+    ]
+  },
+  {
+    "name": "checkPromotedDBConnection",
+    "title": "Databases - Promoted Database Connection Configuration",
+    "status": "violet",
+    "details": [
+      {
+        "name": "Example Application",
+        "field": "example_field",
+        "status": "yellow",
+        "message": "Synthetic fixture finding for checkPromotedDBConnection.",
+        "value": "example-value"
+      }
+    ]
+  }
+]

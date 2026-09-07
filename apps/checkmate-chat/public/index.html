@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ask security questions grounded in your latest Auth0 CheckMate report."
+    />
+    <title>CheckMate Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="CheckMate Assistant home">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>
+            <strong>CHECKMATE</strong>
+            <small>ASSISTANT</small>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <div
+            id="official-auth0-mcp-status"
+            class="mcp-status pending"
+            role="status"
+            aria-live="polite"
+            aria-label="Official Auth0 MCP status: checking"
+            aria-describedby="official-auth0-mcp-tooltip"
+            tabindex="0"
+          >
+            <span class="mcp-status-dot" aria-hidden="true"></span>
+            <span class="mcp-status-copy">
+              <small>OFFICIAL AUTH0 MCP</small>
+              <strong>Checking…</strong>
+            </span>
+            <span
+              id="official-auth0-mcp-tooltip"
+              class="mcp-tooltip"
+              role="tooltip"
+            >
+              Optional. It enriches answers with read-only live context but is
+              not required for scanning, report interpretation, or confirmed dev
+              remediation.
+            </span>
+          </div>
+          <a
+            id="remediation-link"
+            class="review-link"
+            href="http://127.0.0.1:4317"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Remediation Review
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section class="context-bar" aria-label="Run a tenant assessment">
+          <div class="context-primary" aria-live="polite">
+            <span class="eyebrow">SELECTED ASSESSMENT</span>
+            <div id="report-title" class="report-title">Choose a tenant</div>
+            <div id="report-detail" class="report-detail">
+              Run a new CheckMate assessment before starting the conversation.
+            </div>
+          </div>
+          <div class="scan-actions" aria-label="CheckMate assessment options">
+            <button id="scan-dev" class="scan-action dev" type="button">
+              <span class="scan-badge">DEV</span>
+              <span class="scan-copy">
+                <strong>Run CheckMate for dev</strong>
+                <small id="scan-dev-detail">Loading dev tenant…</small>
+              </span>
+            </button>
+            <button id="scan-prod" class="scan-action prod" type="button">
+              <span class="scan-badge">PROD</span>
+              <span class="scan-copy">
+                <strong>Run CheckMate for prod</strong>
+                <small id="scan-prod-detail">Loading prod tenant…</small>
+              </span>
+            </button>
+          </div>
+        </section>
+
+        <div class="conversation-wrap">
+          <section id="welcome" class="welcome">
+            <span class="eyebrow">ASK YOUR TENANT</span>
+            <h1>Turn security findings into clear next steps.</h1>
+            <p>
+              Choose development or production above. Each conversation is
+              grounded in the newly generated report. Supported development
+              findings can become an exact, confirmed API change. Production is
+              conversation-only.
+            </p>
+            <div class="starter-grid" aria-label="Example questions">
+              <button
+                class="starter-card"
+                type="button"
+                data-question="I recently experienced a credential stuffing attack. What should I do first?"
+              >
+                <span class="starter-number">01</span>
+                <strong>Respond to credential stuffing</strong>
+                <span>Find the controls that reduce immediate risk.</span>
+                <span class="starter-arrow" aria-hidden="true">→</span>
+              </button>
+              <button
+                class="starter-card"
+                type="button"
+                data-question="What are the most important security weaknesses in this tenant? Show me the first item."
+              >
+                <span class="starter-number">02</span>
+                <strong>Prioritise tenant weaknesses</strong>
+                <span>Separate quick wins from business decisions.</span>
+                <span class="starter-arrow" aria-hidden="true">→</span>
+              </button>
+              <button
+                class="starter-card"
+                type="button"
+                data-question="How should I harden the GrantMate application?"
+              >
+                <span class="starter-number">03</span>
+                <strong>Harden an application</strong>
+                <span>Review report evidence for GrantMate.</span>
+                <span class="starter-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </section>
+
+          <section
+            id="conversation"
+            class="conversation"
+            aria-live="polite"
+            aria-label="Conversation"
+          ></section>
+        </div>
+      </main>
+
+      <footer class="composer-shell">
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="question">Ask a security question</label>
+          <textarea
+            id="question"
+            name="question"
+            rows="1"
+            maxlength="2000"
+            placeholder="Ask about credential stuffing, MFA, token security, or a particular app…"
+            autocomplete="off"
+          ></textarea>
+          <button id="send-button" type="submit" aria-label="Send question">
+            <span>Ask</span>
+            <span aria-hidden="true">↑</span>
+          </button>
+        </form>
+        <div class="composer-meta">
+          <span
+            >No tenant change occurs without an exact dev API preview and
+            confirmation.</span
+          >
+          <span id="ai-provider-status">AI provider: checking…</span>
+          <button id="clear-button" type="button">Clear conversation</button>
+        </div>
+      </footer>
+    </div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

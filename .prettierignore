@@ -1,0 +1,9 @@
+dist/
+node_modules/
+coverage/
+reports/
+remediation-plans/
+thoughts.md
+
+# Verbatim upstream text; must stay byte-identical to its canonical source
+CODE_OF_CONDUCT.md

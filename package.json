@@ -1,0 +1,53 @@
+{
+  "name": "checkmate-remediation-assistant",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "description": "Deterministic CheckMate remediation and security chatbot",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "bin": {
+    "checkmate-assistant": "dist/src/cli.js"
+  },
+  "engines": {
+    "node": ">=20.18.3"
+  },
+  "scripts": {
+    "build": "npm run build:core && npm run build:app && npm run build:chat",
+    "build:app": "tsc -p tsconfig.json && node scripts/copy-ui-assets.mjs",
+    "build:chat": "npm run build --workspace @checkmate-assistant/chat",
+    "build:core": "npm run build --workspace @checkmate-assistant/core",
+    "predev": "npm run build:core",
+    "dev": "tsx src/cli.ts",
+    "lint": "eslint .",
+    "chat": "npm run start --workspace @checkmate-assistant/chat --",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "pretest": "npm run build:core",
+    "test": "vitest run",
+    "pretest:watch": "npm run build:core",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@auth0/auth0-checkmate": "1.8.4",
+    "commander": "^14.0.0",
+    "dotenv": "^17.0.0",
+    "yaml": "^2.8.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.30.0",
+    "@types/node": "^22.15.0",
+    "eslint": "9.30.0",
+    "eslint-config-prettier": "^10.1.0",
+    "globals": "^16.2.0",
+    "prettier": "^3.6.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "8.35.0",
+    "vitest": "^3.2.0"
+  }
+}
