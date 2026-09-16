@@ -302,7 +302,8 @@ export class CheckmateReportTools {
           findings,
           additionalEvidenceNeeded: definition.additionalEvidenceNeeded,
           responseGuidance: [
-            "Lead with failed and warning findings that directly support actionable suggestions.",
+            "Consider non-passing findings from every CheckMate priority, including blue informational and violet GenAI findings.",
+            "Lead with findings that directly support actionable suggestions.",
             "Do not recommend a control unless a returned CheckMate finding directly supports it.",
             "Do not claim the report proves an attack occurred or identifies its source.",
             "Ask for live logs or configuration when required evidence is missing.",
