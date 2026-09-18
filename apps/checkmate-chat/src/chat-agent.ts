@@ -305,6 +305,43 @@ function cleanAnswerForDisplay(
   };
 }
 
+function ensureDevActionConfirmation(
+  answer: ChatAnswer,
+  autoRemediableFindingIds: string[],
+  alreadySuggestedFindingIds: string[],
+): void {
+  const alreadySuggestedIds = new Set(alreadySuggestedFindingIds);
+  answer.actionConfirmations = answer.actionConfirmations
+    .map((confirmation) => ({
+      ...confirmation,
+      findingIds: confirmation.findingIds.filter(
+        (findingId) => !alreadySuggestedIds.has(findingId),
+      ),
+    }))
+    .filter((confirmation) => confirmation.findingIds.length > 0);
+  if (answer.actionConfirmations.length > 0) return;
+
+  const eligibleIds = new Set(autoRemediableFindingIds);
+  const citedFindingIds = [
+    ...answer.headlineFindingIds,
+    ...answer.sections.flatMap((section) =>
+      section.items.flatMap((item) => item.findingIds),
+    ),
+  ];
+  const findingId = citedFindingIds.find(
+    (candidate) =>
+      eligibleIds.has(candidate) && !alreadySuggestedIds.has(candidate),
+  );
+  if (!findingId) return;
+
+  answer.actionConfirmations = [
+    {
+      question: "Would you like me to prepare this change for dev?",
+      findingIds: [findingId],
+    },
+  ];
+}
+
 export class CheckmateChatAgent {
   private readonly model: ChatModel;
 
@@ -407,7 +444,15 @@ export class CheckmateChatAgent {
           recommendationFindingIds,
           autoRemediableFindingIds,
         );
-        if (context?.profile === "prod") answer.actionConfirmations = [];
+        if (context?.profile === "prod") {
+          answer.actionConfirmations = [];
+        } else if (context?.profile === "dev") {
+        ensureDevActionConfirmation(
+          answer,
+          autoRemediableFindingIds,
+          context.alreadySuggestedFindingIds ?? [],
+        );
+      }
         return {
           answer,
           evidence: {
